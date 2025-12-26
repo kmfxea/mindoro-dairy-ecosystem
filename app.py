@@ -5,62 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, timedelta
 import os
-import subprocess
-import sys
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
-# ========================
-# PWA SUPPORT - MAKE IT INSTALLABLE
-# ========================
-import streamlit as st
-
-# Inject PWA meta tags and links
-st.markdown("""
-<link rel="manifest" href="/manifest.json">
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-<meta name="theme-color" content="#16a34a">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Mindoro Dairy">
-<link rel="icon" href="/icons/icon-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-<meta name="msapplication-TileImage" content="/icons/icon-192x192.png">
-<meta name="msapplication-TileColor" content="#16a34a">
-
-<!-- Install prompt for iOS -->
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
-}
-</script>
-
-<style>
-  .pwa-install {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #16a34a;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-align: center;
-    font-weight: bold;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.05); }
-    100% { transform: translateX(-50%) scale(1); }
-  }
-</style>
-""", unsafe_allow_html=True)
-
-# Optional: Show install prompt (only on mobile)
-if st.button("📱 Install App on Home Screen"):
-    st.info("On mobile: Tap Share → 'Add to Home Screen'")
 # ========================
 # ULTIMATE THEME & UI ENHANCEMENTS
 # ========================
@@ -121,13 +66,6 @@ st.markdown("""
 
 # Optional: Logo placeholder (uncomment if may logo ka)
 # st.sidebar.image("dairy_logo.png", width=200)
-
-# Footer
-st.markdown("""
-<div class="footer">
-    <p>Mindoro Dairy Ecosystem © 2025 • Built with ❤️ for local farmers</p>
-</div>
-""", unsafe_allow_html=True)
 # ========================
 # OPTIONAL: FULL DATABASE RESET (FOR CLEAN START)
 # ========================
