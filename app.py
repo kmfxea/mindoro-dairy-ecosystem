@@ -16,53 +16,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for ultimate polish
-st.markdown("""
-<style>
-    /* Main background & fonts */
-    .main {
-        background-color: #f8fafc;
-    }
-    h1, h2, h3 {
-        color: #1e40af !important;
-        font-family: 'Segoe UI', sans-serif;
-    }
-    .stButton > button {
-        background-color: #16a34a !important;
-        color: white !important;
-        border-radius: 8px !important;
-        border: none !important;
-        height: 3em;
-        width: 100%;
-    }
-    .stButton > button:hover {
-        background-color: #15803d !important;
-    }
-    /* Sidebar */
-    section[data-testid="stSidebar"] {
-        background-color: #f0fdf4;
-    }
-    /* Metrics */
-    .stMetric > div {
-        background-color: #f0fdfa;
-        padding: 1rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    /* Footer */
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #16a34a;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        font-size: 14px;
-    }
-</style>
-""", unsafe_allow_html=True)
+
 
 # Optional: Logo placeholder (uncomment if may logo ka)
 # st.sidebar.image("dairy_logo.png", width=200)
