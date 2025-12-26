@@ -5,6 +5,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date, timedelta
 import os
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
 # ========================
 # PWA SUPPORT - MAKE IT INSTALLABLE
 # ========================
